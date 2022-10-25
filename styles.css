@@ -324,6 +324,32 @@ img {
   margin-left: 30px;
   margin-top: 30px;
 }
+.card-bcg {
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+.thumb-portpholio {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.thumb-portpholio:hover .thumb-text {
+  transform: translateY(0);
+}
+.thumb-text {
+  position: absolute;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  background: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+}
 
 .portpholio-link {
   display: block;
@@ -338,10 +364,7 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.card-bcg {
-  border: 1px solid #eeeeee;
-  padding: 20px 24px;
-}
+
 .teem-p {
   font-size: 16px;
   line-height: 1.19;
