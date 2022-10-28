@@ -100,6 +100,7 @@ img {
   font-style: normal;
   color: var(--title-color);
   transition-duration: 250ms;
+  transition-property: color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -274,6 +275,16 @@ img {
   border: 0;
   border-radius: 4px;
   padding: 6px 22px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background color box-shadow;
+}
+.nav-btn:focus,
+.nav-btn:hover {
+  background: var(--blue-color);
+  color: var(--main-bcg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btns-portpholio {
@@ -341,6 +352,24 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.link-caption {
+  position: relative;
+}
+.caption {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 370px;
+  background: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0px;
 }
 /* ---------------------bcg-teem----------------- */
 .bcg-teem {
@@ -418,7 +447,8 @@ img {
   background: rgba(33, 150, 243, 0.9);
   color: #ffffff;
   transform: translateY(0);
-  transition: transform 250ms ease;
+  transition: transform 250ms linear;
+  transition-property: translateY(-100%);
 }
 
 .portpholio-link {
@@ -461,14 +491,15 @@ img {
   justify-content: center;
   align-items: center;
   color: #afb1b8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color background-color;
 }
 
 .social-network-link:focus,
 .social-network-link:hover {
   background-color: #2196f3;
   color: var(--main-bcg-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-company {
   padding-top: 94px;
@@ -506,12 +537,13 @@ img {
   color: #afb1b8;
   justify-content: center;
   align-items: center;
-  transition: color 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 .logo-company-link:hover,
 .logo-company-link:focus {
   color: var(--blue-color);
+  transition: color 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-company-link:hover .logo-company-svg,
 .logo-company-link:focus .logo-company-svg {
@@ -585,11 +617,4 @@ img {
 .hov:focus,
 .hov:hover {
   color: var(--blue-color);
-}
-.nav-btn:focus,
-.nav-btn:hover {
-  background: var(--blue-color);
-  color: var(--main-bcg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
